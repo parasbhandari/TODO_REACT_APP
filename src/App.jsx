@@ -21,15 +21,13 @@ const handleDeleteItem=(todoItemName)=>{
   
  setTodoItems(newTodoItems);
 }
-  return <div>
-  <center className="todo-container">
+  return <>
+  <center>
     <AppName></AppName>
-    <div className="container">
     <AddTodo onNewItem={handleNewItem}></AddTodo>
-   </div>
    {todoItems.length===0 && <WelcomeMessage></WelcomeMessage>}
    <TodoItems todoItems={todoItems} onDeleteClick={handleDeleteItem}></TodoItems>
   </center>
-  </div>
+  </>
 }
 export default App;

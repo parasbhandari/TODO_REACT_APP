@@ -1,4 +1,5 @@
 import {useState} from "react";
+import { MdAddCircle } from "react-icons/md";
 export default function AddTodo(props){
   const [todoName,setTodoName]= useState("");
   const [todoDate,setTodoDate]= useState("");
@@ -21,7 +22,7 @@ return <div className="row kg-row">
   <input type="date" onChange={handleDateChange} value={todoDate}/>
 </div>
 <div className="col-2">
-<button type="button" className="btn btn-success kg-button" onClick={handleAddButtonClicked}>Add</button>
+<button type="button" className="btn btn-success kg-button" onClick={handleAddButtonClicked}>{<MdAddCircle></MdAddCircle>}</button>
 </div>
 
 </div>
