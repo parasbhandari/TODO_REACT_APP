@@ -4,7 +4,7 @@ function TodoItems(props){
   return(
     <>
     <div className="items-container">
-   { todoItems.map(item=> <TodoItem todoName={item.name} todoDate={item.date} onDeleteClick={props.onDeleteClick}></TodoItem>)}
+   { todoItems.map(item=> <TodoItem  key={item.name} todoName={item.name} todoDate={item.date} onDeleteClick={props.onDeleteClick}></TodoItem>)}
   </div>
   </>
   )
